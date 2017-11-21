@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+    {% block body%}
+    {% include 'includes/_navbar.html' %}
+    <body style="overflow:hidden;">
+        <!-- Login Form -->
+            <div class="ui container" style="margin-top:20%;">
+                    <div class="ui middle aligned center aligned header">
+                        <h1 style="font-family:'Open Sans';font-weight:lighter"> <a href="/">hirezone</a></h1>
+                    </div>
+                    <div>
+                    <form class="ui form" action="" method="POST">
+                  <center> {% include 'includes/_messages.html' %} </center>
+                            <div class="ui five wide field" style="margin-left:35%">
+
+                                <div class="ui left icon input">
+                                    <i class="mail icon"></i>
+                                    <input placeholder="Email" type="email" name="email" value={{request.form.email}}>
+                                </div>
+                            </div>
+                            <div class="ui five wide field" style="margin-left:35%">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input placeholder="Password" type="password" name="password"   value={{request.form.password}}>
+                                </div>
+                            </div>
+                            <button type="submit" class="ui animated button" style="background-color:#388be2;color:#fff;margin-left:43%;width:15%">
+                                    <div class="visible content">Login</div>
+                                    <div class="hidden content">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
+                            </button>
+                            <div class="ui center aligned center aligned header" style="margin-left:5.8%;margin-top:1%;">
+                                <a href="#" style="font-family:'Open Sans';font-weight:lighter;font-size:0.8em;margin-left:-6%;color:#3f51b5;">Forgot Password</a>
+                                <span>
+                                    <a href="signup" style="font-family:'Open Sans';font-weight:lighter;font-size:0.8em;color:#3f51b5;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an Account</a>
+                                </span>
+                            </div>
+                    </form>
+                  </div>
+            </div>
+        <!-- End -->
+        <!-- Loginform Validation Script -->
+        <script>
+             $(document)
+                .ready(function() {
+                $('.ui.form')
+                    .form({
+                    fields: {
+                        email: {
+                        identifier  : 'email',
+                        rules: [
+                            {
+                            type   : 'empty',
+                            prompt : 'Please enter your e-mail'
+                            },
+                            {
+                            type   : 'email',
+                            prompt : 'Please enter a valid e-mail'
+                            }
+                        ]
+                        },
+                        password: {
+                        identifier  : 'password',
+                        rules: [
+                            {
+                            type   : 'empty',
+                            prompt : 'Please enter your password'
+                            },
+                            {
+                            type   : 'length[6]',
+                            prompt : 'Your password must be at least 6 characters'
+                            }
+                        ]
+                        }
+                    }
+                    })
+                ;
+                })
+            ;
+        </script>
+        <!-- End -->
+  {% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+
+  <!-- Main Navbar -->
+{% include 'includes/_navbar_dash.html' %}
+    <!-- End -->
+  {% include 'includes/_sidenav.html' %}
+            <!-- Recent Project Section -->
+
+            <div class="column pusher" id="content">
+              <center>  Welcome {{session.name}} </center>
+            <div class="row">
+                <div class="ten wide stretched column">
+                        <div class="ui segment">
+                        This is an stretched grid column. This segment will always match the tab height
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="ten wide stretched column">
+                            <div class="ui segment">
+                            This is an stretched grid column. This segment will always match the tab height
+                            </div>
+                    </div>
+            </div>
+            <!-- End -->
+        </div>
+    <!-- End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h1> Dashboard</h1>
+<h2> <small> Welcome {{session.name}} </small> </h2>
+
+<div>
+    <a href= "/create">Create a project</a>
+    </div>
+    <div> <a href = "/edit">Edit a project </a> </div>
+    <div><a href ="view">
+        View  projects
+        </a></div>
+<a href="/logout"> logout </a> -->
+{% endblock %}

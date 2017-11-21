@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+    {% block body%}
+        <!-- main -->
+        <div class="center-container">
+            <!---728x90--->
+            <!--//header-->
+            <div class="main-content-agile">
+                <div class="sub-main-w3">
+
+                    <div class="wthree-pro">
+                        <h2>Pending projects</h2>
+                    </div>
+
+                        {% for project in projects %}
+                    <div>
+
+                      <div>
+
+                          <div>
+
+                          Title:
+                      <a href="projects/{{project[0]}}">
+                      {{project[2]}}
+                      </a>
+
+                      <div>  Description:
+                    {{project[3]}}</div>
+
+                    <div>  Status:
+                  {{project[4]}}</div>
+
+            <div>
+
+
+            </div><a href="approve/{{project[0]}}">
+
+      <input type="submit" name="id" value="Approve" />
+    </a>
+                    {% endfor %}
+                  </div></div></div>
+
+    {% endblock %}

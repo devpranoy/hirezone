@@ -1,0 +1,4 @@
+sudo pip3 install flask
+sudo pip3 install WTForms
+sudo pip3 install passlib
+sudo pip3 install mysqlclient

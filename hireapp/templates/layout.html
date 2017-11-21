@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>hirezone | Home</title>
+
+
+
+
+<title>hirezone | Login</title>
+<!-- CSS Files -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/semantic.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/semantic.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'>
+<!-- End -->
+<!-- Font Files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu+Mono" rel="stylesheet">
+<!-- End -->
+<!-- JS Files -->
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script src="{{ url_for('static',filename='js/semantic.min.js') }}"></script>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+
+{% block body%}
+
+{% include 'includes/_messages.html' %}
+
+ {% endblock %}
+</body>
+</html>

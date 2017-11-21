@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+    {% block body%}
+        <!-- main -->
+        <div class="center-container">
+            <!---728x90--->
+            <!--//header-->
+            <div class="main-content-agile">
+                <div class="sub-main-w3">
+
+                    <div class="wthree-pro">
+                        <h2>Timeline</h2>
+                    </div>
+
+                        {% for project in projects %}
+                    <div><div>
+                        Title:
+                        {{project[2]}}</div>
+                      <div>  Description:
+                    {{project[3]}}</div>
+
+                    <div>  Status:
+                  {{project[4]}}</div>
+
+                    <div> Created by: {{session.name}} </div>
+                    </div>
+                    {% endfor %}
+                            </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+<div>
+
+        {% for comment in comments %}
+        <div>
+        {{comment[2]}}
+      </div>
+        {% endfor %}
+
+
+</div>
+
+            <div>
+              <form action="" method="POST">
+<input type ="text" name="comment">
+<input type="submit" value="SUBMIT!">
+</form>
+            </div>
+            <!--//main-->
+            <!--footer-->
+            <div class="footer">
+            </div>
+            <!--//footer-->
+        </div>
+    {% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+    {% block body%}
+
+
+    <!-- Main Navbar -->
+  {% include 'includes/_navbar_dash.html' %}
+    <!-- End -->
+    {% include 'includes/_sidenav.html' %}
+    <!-- Dashboard Section -->
+<div class="pusher">
+            <div class="column pusher" id="content">
+          {% for project in projects %}
+            <div class="row">
+                <div class="ten wide stretched column">
+                        <div class="ui segment">
+                          <a href="projects/{{project[0]}}">
+                          {{project[2]}}
+                          </a>
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+</div>
+            <!-- End -->
+        </div>
+
+    <!-- End -->
+
+
+    {% endblock %}

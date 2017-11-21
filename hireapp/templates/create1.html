@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+    {% block body%}
+        <!-- main -->
+        <div class="center-container">
+            <!---728x90--->
+            <!--//header-->
+            <div class="main-content-agile">
+                <div class="sub-main-w3">
+
+                    <div class="wthree-pro">
+                        <h2>CREATE A PROJECT</h2>
+                    </div>
+
+                    <form  action="" method="POST">
+                        <div class="pom-agile">
+                            <input placeholder="Title" name="title"  class="user" type="Text" required="" value={{request.form.title}}>
+
+                        </div>
+                        <div class="pom-agile">
+                            <input placeholder="Description" name="description"  class="user" type="Text" required="" value={{request.form.description}}>
+
+                        </div>
+                        <div class="sub-w3l">
+                             {% include 'includes/_messages.html' %}
+                            <div class="right-w3l">
+
+                                <input type="submit" value="Create">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--//main-->
+            <!--footer-->
+            <div class="footer">
+            </div>
+            <!--//footer-->
+        </div>
+    {% endblock %}
